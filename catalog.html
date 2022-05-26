@@ -7,18 +7,18 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="header-sedona-logo">
+        <a class="header-sedona-logo" href="index.html">
           <img src="#" alt="Логотип сайта города Седона">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
 
@@ -35,7 +35,7 @@
           </li>
         </ul>
         <button class="navigation-button" type="button">
-          <span>ХОЧУ СЮДА!</span>
+          <span class="search-button-text">хочу сюда!</span>
         </button>
       </nav>
     </header>
@@ -200,7 +200,7 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-        <label>Гостиниц на странице:
+        <label  class="hotel-quantity-text">Гостиниц на странице:
           <select class="select-hotel-quantity">
             <option value="4">4</option>
           </select>
@@ -213,7 +213,9 @@
         <h2 class="heading-2">подпишитесь на рассылку</h2>
         <p> Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="newsletter-email" required>
+          <label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="newsletter-email" required>
+          </label>
           <button class="subscribe-button" type="submit">подписаться</button>
         </form>
       </section>
