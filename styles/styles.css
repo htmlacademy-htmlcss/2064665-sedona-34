@@ -65,7 +65,8 @@
   line-height: 26px;
 }
 
-.advantages-item-first,
+.advantages-item-first,           /*замучился раскрашивать вложенный список, жилье и сувениры так и не
+                                    победил*/
 .advantages-item-second{
   background-color: #82B3D3;
 }
@@ -84,17 +85,20 @@
 
 .advantages-item-housing{
   background-image: url("../images/house.svg");
+  background-size: 75px 72px;
   background-repeat: no-repeat;
 }
 
 .advantages-item-food{
   background-color: #FFFFFF;
   background-image: url("../images/food.svg");
+  background-size: 74px 70px;
   background-repeat: no-repeat;
 }
 
 .advantages-item-gift {
   background-image: url("../images/gift.svg");
+  background-size: 64px 76px;
   background-repeat: no-repeat;
 }
 
@@ -118,17 +122,10 @@
   text-transform: uppercase;
 }
 
-.search-button-text {
-  background-color: #756157;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
 
 .subscribe-main {
   background-image: url("../images/footer-background.jpg");
+  background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
@@ -147,6 +144,23 @@
   font-size: 22px;
   line-height: 26px;
 }
+
+.button {
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.search-button {
+  background-color: #756157;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 
 .subscribe-button {
   color: #ffffff;
@@ -188,27 +202,27 @@
 }
 
 .apply-button {
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
   background-color: #82B3D3;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .button-nonecase {
-  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
   background-color: #000000;
-  text-align: center;
+}
+
+
+
+.hotel-card-link {
+  text-decoration: none;
 }
 
 .hotel-card-title {
-  text-decoration: none; /*не убирает подчеркивание??!*/
   color: #000000;
   font-weight: 700;
   font-size: 24px;
@@ -227,7 +241,6 @@ font-weight: 700;
 font-size: 16px;
 line-height: 20px;
 color: inherit;
-text-decoration: none;
 }
 
 .hotel-card-details-button {
@@ -254,4 +267,17 @@ text-decoration: none;
 
 .heading-2-description-f3 {
   color: #333333;
+}
+
+.footer-phone {
+  text-decoration: none;
+  color: inherit;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.vk-button,
+.telegram-button,
+.youtube-button {
+  color: #000000;
 }
