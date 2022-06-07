@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/pt-sans-400.woff2") format("woff2");
+  src: url("../fonts/pt-sans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,14 +10,13 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/pt-sans-700.woff2") format("woff2");
+  src: url("../fonts/pt-sans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 .page-header,
 .page-index,
-.page-footer
-{
+.page-footer {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -49,6 +48,7 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
 .heading-2-black {
   color: #000000;
   background-color: #ffffff;
@@ -65,9 +65,8 @@
   line-height: 26px;
 }
 
-.advantages-item-first,           /*замучился раскрашивать вложенный список, жилье и сувениры так и не
-                                    победил*/
-.advantages-item-second{
+.advantages-item-first,
+.advantages-item-second {
   background-color: #82B3D3;
 }
 
@@ -76,20 +75,19 @@
 .advantages-item-third,
 .advantages-item-fifth {
   background-color: rgba(131, 179, 211, 0.12);
-
 }
 
 .advantages-item-fourth {
   background-color: rgba(131, 179, 211, 0.2)
 }
 
-.advantages-item-housing{
+.advantages-item-housing {
   background-image: url("../images/house.svg");
   background-size: 75px 72px;
   background-repeat: no-repeat;
 }
 
-.advantages-item-food{
+.advantages-item-food {
   background-color: #FFFFFF;
   background-image: url("../images/food.svg");
   background-size: 74px 70px;
@@ -122,7 +120,6 @@
   text-transform: uppercase;
 }
 
-
 .subscribe-main {
   background-image: url("../images/footer-background.jpg");
   background-size: 100% auto;
@@ -150,7 +147,6 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
 }
 
 .search-button {
@@ -160,7 +156,6 @@
   font-size: 16px;
   line-height: 20px;
 }
-
 
 .subscribe-button {
   color: #ffffff;
@@ -175,7 +170,6 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-
 
 .catalog-header-title {
   background-color: #000000;
@@ -216,8 +210,6 @@
   background-color: #000000;
 }
 
-
-
 .hotel-card-link {
   text-decoration: none;
 }
@@ -237,10 +229,10 @@
 .hotel-card-details-button,
 .hotel-card-favorite-button,
 .hotel-card-selected-button {
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-color: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: inherit;
 }
 
 .hotel-card-details-button {
