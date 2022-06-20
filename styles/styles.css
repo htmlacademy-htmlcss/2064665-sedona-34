@@ -41,6 +41,17 @@ body {
   color: var(--text-color-bk);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header,
 .page-index,
 .page-footer {
@@ -57,12 +68,15 @@ body {
 
 .navigation {
   display: flex;
+  /* margin-bottom: 0px; */
+  max-height: 65px;     /* без этой строки высота хедера была 74px, не могу понять почему, в т.ч. почему именно 74px*/
 }
 
 .header-sedona-logo {
   width: 139px;
   margin-right: 30px;
   margin-left: 70px;
+  z-index: 1;
 }
 
 .reset-list {
@@ -72,6 +86,9 @@ list-style: none;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 490px;
 }
 
@@ -81,11 +98,19 @@ list-style: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 17px;
   color: var(--text-color-bk);
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+  margin-right: 10px;
 }
 
 .footer-social {
@@ -111,6 +136,16 @@ list-style: none;
   background-repeat: no-repeat;
 }
 
+.welcome-logo {
+  margin-top: 50px;
+  margin-bottom: 83px;
+}
+        /* между welcome-logo И reasons виден зазор в несколько пикселей */
+.reasons {
+  margin: 0;
+  padding-top: 63px;
+}
+
 .heading-2-black {
   color: var(--text-color-bk);
   background-color: var(--background-color-wh);
@@ -118,35 +153,51 @@ list-style: none;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .heading-2-description-black {
-  color: var(--text-color-bk);
-  background-color: var(--background-color-wh);
+  display: inline-block;
+  /* color: var(--text-color-bk);
+  background-color: var(--background-color-wh); */
   font-size: 22px;
   line-height: 26px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+
+.heading-2-description-bottom {
+  margin-bottom: 56px;
 }
 
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-bottom: 90px;
 }
 
 .advantages-item {
-  width: 400px;
+  display: block;
+  box-sizing: border-box;
+  max-width: 400px;
+  min-height: 384px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 103px;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-first,
 .advantages-item-second {
   background-color: var(--background-color-bl);
+  padding-top: 92px;
 }
 
-.advantages-item-housing,
-.advantages-item-souvenirs,
-.advantages-item-third,
-.advantages-item-fifth {
-  background-color: rgba(131, 179, 211, 0.12);
+.advantage-photo img,
+.welcome-logo {
+  vertical-align: middle;
 }
 
 .advantages-item-fourth {
@@ -156,20 +207,26 @@ list-style: none;
 .advantages-item-housing {
   background-image: url("../images/house.svg");
   background-size: 75px 72px;
+  background-position: top;
   background-repeat: no-repeat;
+  padding-top: 182px;
 }
 
 .advantages-item-food {
   background-color: var(--background-color-wh);
   background-image: url("../images/food.svg");
   background-size: 74px 70px;
+  background-position: top;
   background-repeat: no-repeat;
+  padding-top: 182px;
 }
 
 .advantages-item-gift {
   background-image: url("../images/gift.svg");
   background-size: 64px 76px;
+  background-position: top;
   background-repeat: no-repeat;
+  padding-top: 182px;
 }
 
 .advantages-title-white {
@@ -178,6 +235,8 @@ list-style: none;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .advantages-order-white,
@@ -185,11 +244,24 @@ list-style: none;
   color: var(--text-color-wh);
 }
 
+.advantages-order {
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.advantages-description-white,
+.advantages-description-black {
+  margin: 0;
+}
+
 .advantages-title-black {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .subscribe-main {
