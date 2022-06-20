@@ -46,9 +46,7 @@
         <h1 class="catalog-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs reset-list">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden">Главная</span>
-            </a>
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
@@ -104,7 +102,8 @@
           </fieldset>
 
           <fieldset class="catalog-filter-group cost">
-            <legend class="catalog-filter-title">Стоимость, ₽:<span></span></legend>
+            <legend class="catalog-filter-title">Стоимость, ₽:</legend>    <!--по макету отступ между заголовком и input 34px, а между 2мя оставшимися
+            заголовками и их списками - 30. Насколько необходимо делать к этому одному заголовку именно 34px? -->
             <label><input type="text" value="0 от"></label>
             <label><input type="text" value="9000 до"></label>
             <div id="slider"></div>
@@ -115,7 +114,7 @@
           </div>
         </form>
       </header>
-
+<!-- размер хедера по вертикали пока непонятно себя ведет, 20px лишние  -->
       <section class="hotel-results">
         <div class="results-header">
           <h2 class="heading-2-black result">найдено гостиниц:38</h2>
