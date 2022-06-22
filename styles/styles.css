@@ -17,10 +17,12 @@
 :root {
   --text-color-wh: #FFFFFF;
   --text-color-bk: #000000;
+  --text-color-gy: #333333;
   --background-color-wh: #ffffff;
   --background-color-bl: #82B3D3;
   --background-color-br: #756157;
   --background-color-gr: #7DB54F;
+  --background-color-gy: #f2f2f2;
 }
 
 html {
@@ -119,8 +121,8 @@ list-style: none;
 }
 
 .footer-social-list {
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-social-item {
@@ -175,10 +177,14 @@ flex-wrap: wrap;
 }
 
 .heading-2-description-black {
-  display: inline-block;
   font-size: 22px;
   line-height: 26px;
   margin: 0 auto;
+  color: var(--text-color-gy);
+}
+
+.heading-2-description-black-footer{
+  margin-bottom: 46px;
 }
 
 .heading-2-description-bottom {
@@ -272,6 +278,10 @@ flex-wrap: wrap;
   margin: 0;
 }
 
+.advantages-description-black {
+  color: var(--text-color-gy);
+}
+
 .advantages-title-black {
   font-weight: 700;
   font-size: 24px;
@@ -354,6 +364,7 @@ flex-wrap: wrap;
   font-size: 60px;
   line-height: 78px;
   margin: 0;
+  padding: 0;
   margin-bottom: 10px;
 }
 
@@ -371,6 +382,10 @@ flex-wrap: wrap;
 
 .catalog-filter {
   display: flex;
+}
+
+.catalog-filter-group {
+  padding: 0;
 }
 
 .infrastructure {
@@ -401,11 +416,15 @@ flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
+.title-cost {
+  margin-bottom: 34px;
+}
+
 .catalog-filter-list {
   background-color: var(--background-color-bl);
 }
 
-.catalog-filter-item {
+.catalog-filter-item:not(:last-child) {
   margin-bottom: 15px;
 }
 
@@ -428,7 +447,6 @@ flex-wrap: wrap;
 .filter-buttons {
   margin-top: 60px;
 }
-
 
 .results-header {
   display: flex;
@@ -484,7 +502,7 @@ flex-wrap: wrap;
 
 .hotel-card-type,
 .hotel-card-price {
-  color: #333333;
+  color: var(--text-color-gy);
 }
 
 .hotel-card-details-button,
@@ -540,7 +558,7 @@ flex-wrap: wrap;
 
 .pagination-item:first-child .pagination-link {
   color: var(--text-color-bk);
-  background-color: #f2f2f2;
+  background-color: var(--background-color-gy);
 }
 
 .pagination-item:nth-child(5) .pagination-link {
@@ -556,11 +574,7 @@ flex-wrap: wrap;
 }
 
 .hotel-quantity-text {
-  color: #333333;
-}
-
-.heading-2-description-f3 {
-  color: #333333;
+  color: var(--text-color-gy);
 }
 
 .footer-phone {
