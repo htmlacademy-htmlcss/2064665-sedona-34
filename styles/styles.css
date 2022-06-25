@@ -148,7 +148,6 @@ list-style: none;
   margin-left: auto;
 }
 
-
 .page-index {
   background-image: url("../images/welcome-background.jpg");
   background-size: 100% auto;
@@ -477,7 +476,7 @@ list-style: none;
 
 .hotel-list {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: 1fr 1fr 1fr;
   width: 1056px;
   padding: 0;
   margin-left: 73px;
@@ -503,7 +502,7 @@ list-style: none;
 }
 
 .hotel-card-title-link {
-grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .hotel-card-title {
