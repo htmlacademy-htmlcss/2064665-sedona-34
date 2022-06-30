@@ -537,12 +537,13 @@ button:disabled {
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-color: var(--background-color-bl);
   margin: 0;
   padding: 35px 70px 70px;
 }
 
 .catalog-header-title {
-  background-color: var(--background-color-bl);
+  /* background-color: var(--background-color-bl); */
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -557,7 +558,7 @@ button:disabled {
 }
 
 .breadcrumbs-link {
-  background-color: var(--background-color-bl);
+  /* background-color: var(--background-color-bl); */
   color: var(--text-color-wh);
   font-size: 16px;
   margin-right: 25px;
@@ -607,7 +608,7 @@ button:disabled {
 }
 
 .catalog-filter-title {
-  background-color: var(--background-color-bl);
+  /* background-color: var(--background-color-bl); */
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -619,7 +620,7 @@ button:disabled {
 }
 
 .catalog-filter-list {
-  background-color: var(--background-color-bl);
+  /* background-color: var(--background-color-bl); */
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -652,11 +653,13 @@ button:disabled {
 }
 
 .button-nonecase {
+  display: block;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
-  background-color: var(--background-color-bl);
-  background-color: none;/*29.06*/
+  margin: 0 auto;
+  /* background-color: var(--background-color-bl); */
+  background-color: transparent; /* 29.06 */
   border: none;/*29.06*/
   text-transform: capitalize;/*29.06*/
 }
@@ -708,6 +711,10 @@ button:disabled {
   margin-right: 8px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+}
+
+.button-active {
+  border-color: var(--text-color-bk);
 }
 
 .results-view-item:hover,
@@ -913,12 +920,12 @@ button:disabled {
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: #68A2CA;/*29.06*/
-  border-radius: 1px #82B3D3;/*29.06*/
+  border: 1px solid red;/*29.06*/ /*неведомая хрень - focus - (перемещение табом?) в инспекторе focus красный, в браузере - черный, и черная рамка на focus-visible*/
 }
 
 .pagination-link:active {
   background-color: #82B3D3;/*29.06*/
-  border-radius: 1px #82B3D3;/*29.06*/
+  border-color: #82B3D3;/*29.06*/
   color: var(--text-color-transparent);
 }
 
