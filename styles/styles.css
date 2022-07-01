@@ -18,7 +18,6 @@
   --text-color-wh: #FFFFFF;
   --text-color-bk: #000000;
   --text-color-gy: #333333;
-  --text-color-transparent: #ffffff4d;      /*цвет с прозрачностью 0,3 из rgba сконвертировал в rgbacolorpicker - норм?*/
   --background-color-wh: #ffffff;
   --background-color-bl: #82B3D3;
   --background-color-bl-add: #83B3D3;
@@ -26,12 +25,16 @@
   --background-color-br: #756157;
   --background-color-br-hov-foc: #615048;
   --background-color-gr: #7DB54F;
+  --background-color-gr-add: #6C9E42; /*нормальная ли практика называть переменную, например, color-6c9e42? По-моему, я увлекся с многосложными названиями */
   --background-color-gy-add: #E5E5E5;
   --background-color-gy: #f2f2f2;
   --line-color-br: #756257;
   --line-color-gr: #E6E6E6;
-  --logo-color-transparent-bl: #68a2ca4d; /*цвет с прозрачностью 0,3 из rgba сконвертировал в rgbacolorpicker - норм?*/
+  --logo-color-transparent-bl: #68a2ca4d;
   --logo-color-transparent-br: #7561574d;
+  --color-transparent-60: #ffffff99;
+  --color-transparent-30: #ffffff4d;      /*цвет с прозрачностью 0,3-0,6из rgba сконвертировал в rgbacolorpicker - норм?*/
+
 }
 
 html {
@@ -149,7 +152,7 @@ body {
 }
 
 .footer-social-item {
-                 /* display: block; */
+  /* display: block; */
   /* width: 25px;
   height: 25px;
   margin: 0 auto;
@@ -413,7 +416,6 @@ body {
 }
 
 .heading-2-white {
-  /* background-color: var(--background-color-bl); */
   color: var(--text-color-wh);
   font-weight: 700;
   font-size: 30px;
@@ -424,7 +426,6 @@ body {
 }
 
 .heading-2-description-white {
-  /* background-color: var(--background-color-bl); */
   color: var(--text-color-wh);
   font-size: 22px;
   line-height: 26px;
@@ -449,10 +450,10 @@ body {
   color: var(--text-color-wh);
   font-weight: 400;
   font-size: 10px;
-  line-height: 20px; /*значение не по макету (13px) зато текст встал по центру. Подобрал наугад, наверное, это не очень хорошо?)*/
+  line-height: 20px; /*значение не по макету (13px) зато при 20px текст встал по центру. Подобрал наугад, наверное, это не очень хорошо?)*/
   width: 20px;
   height: 20px;
-  background-color: #7DB54F;
+  background-color: var(--background-color-gr);
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -482,7 +483,7 @@ body {
 
 .search-button:active {
   background-color: var(--background-color-br);
-  color: var(--text-color-transparent)
+  color: var(--color-transparent-30)
 }
 
 .search-button-bottom {
@@ -521,7 +522,7 @@ button:disabled {
 
 .subscribe-button:active {
   background-color: var(--background-color-bl);
-  color: var(--text-color-transparent)
+  color: var(--color-transparent-30)
 }
 
 .navigation-icon {
@@ -543,7 +544,6 @@ button:disabled {
 }
 
 .catalog-header-title {
-  /* background-color: var(--background-color-bl); */
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -558,7 +558,6 @@ button:disabled {
 }
 
 .breadcrumbs-link {
-  /* background-color: var(--background-color-bl); */
   color: var(--text-color-wh);
   font-size: 16px;
   margin-right: 25px;
@@ -608,7 +607,6 @@ button:disabled {
 }
 
 .catalog-filter-title {
-  /* background-color: var(--background-color-bl); */
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -617,10 +615,6 @@ button:disabled {
 
 .title-cost {
   margin-bottom: 34px;
-}
-
-.catalog-filter-list {
-  /* background-color: var(--background-color-bl); */
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -632,24 +626,23 @@ button:disabled {
   font-size: 16px;
   line-height: 20px;
   color: inherit;
-  /* background-color: var(--background-color-bl); 29.06*/
-  background-color: #82B3D3;/*29.06*/
+  background-color: var(--background-color-bl);
   margin-bottom: 20px;
-  padding: 14px 15px;/*29.06*/
-  box-sizing: border-box;/*29.06*/
-  min-width: 160px;/*29.06*/
-  border: none;/*29.06*/
-  border-radius: 4px;/*29.06*/
+  padding: 14px 15px;
+  box-sizing: border-box;
+  min-width: 160px;
+  border: none;
+  border-radius: 4px;
 }
 
 .apply-button:hover,
 .apply-button:focus {
-  background-color: #68A2CA;/*29.06*/
+  background-color: var(--background-color-bl-hov-foc);
 }
 
 .apply-button:active {
-  background-color: #82B3D3;/*29.06*/
-  color: var(--text-color-transparent);
+  background-color: var(--background-color-bl);
+  color: var(--color-transparent-30);
 }
 
 .button-nonecase {
@@ -658,29 +651,43 @@ button:disabled {
   line-height: 20px;
   color: inherit;
   margin: 0 auto;
-  /* background-color: var(--background-color-bl); */
-  background-color: transparent; /* 29.06 */
-  border: none;/*29.06*/
-  text-transform: capitalize;/*29.06*/
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
 }
 
 .button-nonecase:hover {
-
-  color: rgba(255, 255, 255, 0.6);/*29.06*/
+  color: var(--color-transparent-60);
 }
 
 .button-nonecase:focus {
-  color:#ffffff;/*29.06*/
-  border: 3px solid #83B3D3;/*29.06*/
+  color:#ffffff;
+  border: 3px solid #83B3D3;
 }
 
 .button-nonecase:active {
-  color: var(--text-color-transparent);
+  color: var(--color-transparent-30);
+}
+
+.breadcrumb-state-toggle {
+  fill: var(--background-color-wh);
+}
+
+.breadcrumb-state-toggle:hover {
+  fill: var(--color-transparent-60);
+}
+
+.breadcrumb-state-toggle:focus {
+  fill: var(--background-color-wh);
+}
+
+.breadcrumb-state-toggle:active {
+  color: var(--color-transparent-30);
 }
 
 .filter-buttons {
   margin: 60px auto 20px;
-  align-self: center;/*29.06*/
+  align-self: center;
 }
 
 .results-header {
@@ -717,14 +724,18 @@ button:disabled {
   border-color: var(--text-color-bk);
 }
 
-.results-view-item:hover,
-.results-view-item:active {
+.results-view-item:hover {
   border: 2px solid #000000;
 }
 
 .results-view-item:focus {
   border: 2px solid #68A2CA;
 }
+
+.results-view-item:active {
+  border: 2px solid #000000;
+}
+
 
 .results-icon {
   padding: 17px;
@@ -793,9 +804,9 @@ button:disabled {
   line-height: 20px;
   text-transform: uppercase;
   background-color: var(--background-color-gy);
-  padding: 9px 22px;/*29.06*/
-  border: none;/*29.06*/
-  border-radius: 4px;/*29.06*/
+  padding: 9px 22px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hotel-card-type,
@@ -815,63 +826,63 @@ button:disabled {
 
 .hotel-card-details-button {
   background-color: var(--background-color-br);
-  padding: 9px 15px;/*29.06*/
-  border: none;/*29.06*/
-  border-radius: 4px;/*29.06*/
+  padding: 9px 15px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hotel-card-favorite-button {
   background-color: var(--background-color-bl);
-  border-radius: 4px;/*29.06*/
+  border-radius: 4px;
   padding: 9px 15px;
 }
 
 .hotel-card-details-button {
-  background-color: #756157;/*29.06*/
+  background-color: var(--background-color-br);
 }
 
 .hotel-card-details-button:hover,
 .hotel-card-details-button:focus {
-  background-color: #615048;/*29.06*/
+  background-color: var(--background-color-br-hov-foc);
 }
 
 .hotel-card-details-button:active {
-  background-color: #756157;
-  color: var(--text-color-transparent);
+  background-color: var(--background-color-br);
+  color: var(--color-transparent-30);
 }
 
 .hotel-card-details-button:disabled {
-  background-color: #E5E5E5;/*29.06*/
+  background-color: var(--background-color-gy-add);
 }
 
 .hotel-card-favorite-button:hover,
 .hotel-card-favorite-button:focus {
-  background-color: #68A2CA;/*29.06*/
+  background-color: var(--background-color-bl-hov-foc);
 }
 
 .hotel-card-favorite-button:active {
-  background-color: #82B3D3;/*29.06*/
-  color: var(--text-color-transparent);
+  background-color: var(--background-color-bl);
+  color: var(--color-transparent-30);
 }
 
 .hotel-card-favorite-button:disabled {
-  background-color: #E5E5E5;/*29.06*/
+  background-color: var(--background-color-gy-add);
 }
 
 .hotel-card-selected-button {
   background-color: var(--background-color-gr);
-  border-radius: 4px;/*29.06*/
-  padding: 9px 15px;/*29.06*/
+  border-radius: 4px;
+  padding: 9px 15px;
 }
 
 .hotel-card-selected-button:hover,
 .hotel-card-selected-button:focus {
-  background-color: #6C9E42;
+  background-color: var(--background-color-gr-add);
 }
 
 .hotel-card-selected-button:active {
-  background-color: #7DB54F;
-  color: var(--text-color-transparent);
+  background-color: var(--background-color-gr);
+  color: var(--color-transparent-30);
 }
 
 .results-footer {
@@ -913,20 +924,19 @@ button:disabled {
   line-height: 36px;
   color: inherit;
   text-decoration: none;
-  background-color: #82B3D3;/*29.06*/
-  border-radius: 4px;/*29.06*/
+  background-color: var(--background-color-bl);
+  border-radius: 4px;
 }
 
 .pagination-link:hover,
 .pagination-link:focus {
-  background-color: #68A2CA;/*29.06*/
-  border: 1px solid red;/*29.06*/ /*неведомая хрень - focus - (перемещение табом?) в инспекторе focus красный, в браузере - черный, и черная рамка на focus-visible*/
+  background-color: var(--background-color-bl-hov-foc);
+  border: 1px solid var(--background-color-bl);    /*что-то странное в состоянии focus (перемещение табом же?) в инспекторе focus: цвет соответствует объявленному, но в браузере рамка черная при передвижением tab-ом, и черная рамка на focus-visible: . Похоже, я что-то не понимаю*/
 }
 
 .pagination-link:active {
-  background-color: #82B3D3;/*29.06*/
-  border-color: #82B3D3;/*29.06*/
-  color: var(--text-color-transparent);
+  background-color: var(--background-color-bl);   /*в макете зачем-то выделена граница с таким же цветом - ??*/
+  color: var(--color-transparent-30);
 }
 
 .pagination-item:first-child .pagination-link {
