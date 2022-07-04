@@ -15,26 +15,24 @@
 }
 
 :root {
-  --text-color-wh: #FFFFFF;
-  --text-color-bk: #000000;
-  --text-color-gy: #333333;
-  --background-color-wh: #ffffff;
-  --background-color-bl: #82B3D3;
-  --background-color-bl-add: #83B3D3;
-  --background-color-bl-hov-foc: #68A2CA;
-  --background-color-br: #756157;
-  --background-color-br-hov-foc: #615048;
-  --background-color-gr: #7DB54F;
-  --background-color-gr-add: #6C9E42; /*нормальная ли практика называть переменную, например, color-6c9e42? По-моему, я увлекся с многосложными названиями */
-  --background-color-gy-add: #E5E5E5;
-  --background-color-gy: #f2f2f2;
-  --line-color-br: #756257;
-  --line-color-gr: #E6E6E6;
-  --logo-color-transparent-bl: #68a2ca4d;
-  --logo-color-transparent-br: #7561574d;
-  --color-transparent-60: #ffffff99;
-  --color-transparent-30: #ffffff4d;      /*цвет с прозрачностью 0,3-0,6из rgba сконвертировал в rgbacolorpicker - норм?*/
-
+  --color-white:#FFFFFF;
+  --color-white-ffffff99: #ffffff99;
+  --color-white-ffffff4d: #ffffff4d;
+  --color-black: #000000;
+  --color-black-333333: #333333;
+  --color-blue-82B3D3: #82B3D3;
+  --color-blue-83B3D3: #83B3D3;
+  --color-blue-68A2CA: #68A2CA;
+  --color-blue-68a2ca4d: #68a2ca4d;
+  --color-brown-756157: #756157;
+  --color-brown-7561574d: #7561574d;
+  --color-brown-615048: #615048;
+  --color-brown-756257: #756257;
+  --color-green-7DB54F: #7DB54F;
+  --color-green-6C9E42: #6C9E42;
+  --color-gray-E5E5E5: #E5E5E5;
+  --color-gray-f2f2f2: #f2f2f2;
+  --color-gray-E6E6E6: #E6E6E6;
 }
 
 html {
@@ -51,8 +49,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  background-color: var(--background-color-wh);
-  color: var(--text-color-bk);
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .visually-hidden {
@@ -73,7 +71,7 @@ body {
 }
 
 .page-catalog {
-  color: var(--text-color-wh);
+  color: var(--color-white);
 }
 
 .main-container {
@@ -117,7 +115,7 @@ body {
   left: 17px;
   right: 17px;
   height: 2px;
-  background-color: var(--line-color-br);
+  background-color: var(--color-brown-756257);
   content: "";
 }
 
@@ -125,7 +123,7 @@ body {
   position: relative;
   display: block;
   padding: 20px 17px;
-  color: var(--text-color-bk);
+  color: var(--color-black);
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -142,7 +140,7 @@ body {
   display: flex;
   margin: 0 auto;
   padding: 45px 70px 35px 80px;
-  align-items: center;   /*лого не выравнивается*/
+  align-items: center;
 }
 
 .footer-social-list {
@@ -151,52 +149,34 @@ body {
   align-items: center;
 }
 
-.footer-social-item {
-  /* display: block; */
-  /* width: 25px;
-  height: 25px;
-  margin: 0 auto;
-  margin-right: 22px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: green; */
-}
-
 .footer-social-link {
   position: relative;
   display: block;
-  /* background-color: #000000; */
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px 17px; */
   min-width: 25px;
   min-height: 25px;
   margin: 0;
   padding: 18px 10px;
   margin-right: 3px;
-  /*margin-top: 8px;
-  margin-bottom: 8px; */
-  /* background-color: green; */
 }
 
 .footer-social-link {
-  fill: var(--background-color-bl-add);
+  fill: var(--color-blue-83B3D3);
 }
 
 .footer-social-link:hover {
-  fill: var(--background-color-bl-hov-foc);
+  fill: var(--color-blue-68A2CA);
 }
 
 .footer-social-link:focus {
-  fill: var(--background-color-bl-hov-foc);
+  fill: var(--color-blue-68A2CA);
 }
 
 .footer-social-link:active {
-  fill: var(--logo-color-transparent-bl);
+  fill: var(--color-blue-68a2ca4d);
 }
 
 .youtube-button {
-  margin-right: 0;    /*через nth-child/nth-of-type не вышло обнулить*/
+  margin-right: 0;
 }
 
 .social {
@@ -206,22 +186,22 @@ body {
 }
 
 .footer-html-academy-logo {
-  position: relative;
   display: block;
   width: 115px;
+  margin-top: 9px;
   margin-left: auto;
 }
 
 .footer-html-academy-logo:hover {
-  fill: var(--background-color-br);
+  fill: var(--color-brown-756157);
 }
 
 .footer-html-academy-logo:focus {
-  fill: var(--background-color-br);
+  fill: var(--color-brown-756157);
 }
 
 .footer-html-academy-logo:active {
-  fill: var(--logo-color-transparent-br);
+  fill: var(--color-brown-7561574d);
 }
 
 .page-index {
@@ -250,13 +230,13 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   position: relative;
-  left:-270px;          /*при масштабировании (при некоторых значениях масштаба) появляется горизонтальная */
-  margin-top: -57px;    /*или вертикальная полоса*/
+  left:-270px;
+  margin-top: -57px;
 }
 
 .heading-2-black {
-  color: var(--text-color-bk);
-  background-color: var(--background-color-wh);
+  color: var(--color-black);
+  background-color: var(--color-white);
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -270,7 +250,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin: 0 auto;
-  color: var(--text-color-gy);
+  color: var(--color-black-333333);
 }
 
 .heading-2-description-black-footer{
@@ -304,7 +284,7 @@ body {
 
 .advantages-item-first,
 .advantages-item-second {
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   padding-top: 92px;
 }
 
@@ -327,7 +307,7 @@ body {
 }
 
 .advantages-item-food {
-  background-color: var(--background-color-wh);
+  background-color: var(--color-white);
   background-image: url("../images/food.svg");
   background-size: 74px 70px;
   background-position-x: 163px;
@@ -346,7 +326,7 @@ body {
 }
 
 .advantages-title-white {
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -357,7 +337,7 @@ body {
 
 .advantages-order-white,
 .advantages-description-white {
-  color: var(--text-color-wh);
+  color: var(--color-white);
 }
 
 .advantages-order {
@@ -372,7 +352,7 @@ body {
 }
 
 .advantages-description-black {
-  color: var(--text-color-gy);
+  color: var(--color-black-333333);
 }
 
 .advantages-title-black {
@@ -393,7 +373,7 @@ body {
   background-image: url("../images/footer-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
 }
 
 .subscribe {
@@ -412,11 +392,11 @@ body {
   border-bottom-left-radius: 10px;
   border: none;
   padding: 0;
-  background-color: var(--background-color-gy);
+  background-color: var(--color-gray-f2f2f2);
 }
 
 .heading-2-white {
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -426,7 +406,7 @@ body {
 }
 
 .heading-2-description-white {
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-size: 22px;
   line-height: 26px;
   margin: 0;
@@ -442,18 +422,18 @@ body {
 
 .header-search-button {
   border: none;
-  background-color: var(--background-color-wh);
+  background-color: var(--color-white);
 }
 
 .heart-circle::after {
   content: "12";
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-weight: 400;
   font-size: 10px;
-  line-height: 20px; /*значение не по макету (13px) зато при 20px текст встал по центру. Подобрал наугад, наверное, это не очень хорошо?)*/
+  line-height: 20px;
   width: 20px;
   height: 20px;
-  background-color: var(--background-color-gr);
+  background-color: var(--color-green-7DB54F);
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -461,8 +441,8 @@ body {
 }
 
 .search-button {
-  background-color: var(--background-color-br);
-  color: var(--text-color-wh);
+  background-color: var(--color-brown-756157);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -474,16 +454,16 @@ body {
 }
 
 .search-button:hover {
-  background-color: var(--background-color-br-hov-foc);
+  background-color: var(--color-brown-615048);
 }
 
 .search-button:focus {
-  background-color: var(--background-color-br-hov-foc);
+  background-color: var(--color-brown-615048);
 }
 
 .search-button:active {
-  background-color: var(--background-color-br);
-  color: var(--color-transparent-30)
+  background-color: var(--color-brown-756157);
+  color: var(--color-white-ffffff4d)
 }
 
 .search-button-bottom {
@@ -496,15 +476,15 @@ body {
 }
 
 button:disabled {
-  color: var(--background-color-gy-add);
+  color: var(--color-gray-E5E5E5);
 }
 
 .subscribe-button {
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   width: 200px;
   height: 60px;
   border: none;
@@ -513,16 +493,16 @@ button:disabled {
 }
 
 .subscribe-button:hover {
-  background-color: var(--background-color-bl-hov-foc);
+  background-color: var(--color-blue-68A2CA);
 }
 
 .subscribe-button:focus {
-  background-color: var(--background-color-bl-hov-foc);
+  background-color: var(--color-blue-68A2CA);
 }
 
 .subscribe-button:active {
-  background-color: var(--background-color-bl);
-  color: var(--color-transparent-30)
+  background-color: var(--color-blue-82B3D3);
+  color: var(--color-white-ffffff4d)
 }
 
 .navigation-icon {
@@ -538,7 +518,7 @@ button:disabled {
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   margin: 0;
   padding: 35px 70px 70px;
 }
@@ -558,7 +538,7 @@ button:disabled {
 }
 
 .breadcrumbs-link {
-  color: var(--text-color-wh);
+  color: var(--color-white);
   font-size: 16px;
   margin-right: 25px;
 }
@@ -626,7 +606,7 @@ button:disabled {
   font-size: 16px;
   line-height: 20px;
   color: inherit;
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   margin-bottom: 20px;
   padding: 14px 15px;
   box-sizing: border-box;
@@ -637,12 +617,12 @@ button:disabled {
 
 .apply-button:hover,
 .apply-button:focus {
-  background-color: var(--background-color-bl-hov-foc);
+  background-color: var(--color-blue-68A2CA);
 }
 
 .apply-button:active {
-  background-color: var(--background-color-bl);
-  color: var(--color-transparent-30);
+  background-color: var(--color-blue-82B3D3);
+  color: var(--color-white-ffffff4d);
 }
 
 .button-nonecase {
@@ -657,32 +637,31 @@ button:disabled {
 }
 
 .button-nonecase:hover {
-  color: var(--color-transparent-60);
+  color: var(--color-white-ffffff99);
 }
 
 .button-nonecase:focus {
-  color:#ffffff;
-  border: 3px solid #83B3D3;
+  border: 3px solid var(--color-blue-83B3D3);
 }
 
 .button-nonecase:active {
-  color: var(--color-transparent-30);
+  color: var(--color-white-ffffff4d);
 }
 
 .breadcrumb-state-toggle {
-  fill: var(--background-color-wh);
+  fill: var(--color-white);
 }
 
 .breadcrumb-state-toggle:hover {
-  fill: var(--color-transparent-60);
+  fill: var(--color-white-ffffff99);
 }
 
 .breadcrumb-state-toggle:focus {
-  fill: var(--background-color-wh);
+  fill: var(--color-white);
 }
 
 .breadcrumb-state-toggle:active {
-  color: var(--color-transparent-30);
+  color: var(--color-white-ffffff4d);
 }
 
 .filter-buttons {
@@ -721,7 +700,7 @@ button:disabled {
 }
 
 .button-active {
-  border-color: var(--text-color-bk);
+  border-color: var(--color-black);
 }
 
 .results-view-item:hover {
@@ -774,7 +753,7 @@ button:disabled {
 
 .hotel-card-title {
   margin: 0;
-  color: var(--text-color-bk);
+  color: var(--color-black);
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -787,7 +766,7 @@ button:disabled {
 
 .hotel-card-stars {
   grid-column: 1 / 2;
-  color: var(--background-color-bl-add);
+  color: var(--color-blue-83B3D3);
   display: table-cell;
   align-self: center;
 }
@@ -803,7 +782,7 @@ button:disabled {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  background-color: var(--background-color-gy);
+  background-color: var(--color-gray-f2f2f2);
   padding: 9px 22px;
   border: none;
   border-radius: 4px;
@@ -812,7 +791,7 @@ button:disabled {
 .hotel-card-type,
 .hotel-card-price,
 .hotel-card-rating {
-  color: var(--text-color-gy);
+  color: var(--color-black-333333);
 }
 
 .hotel-card-details-button,
@@ -825,64 +804,64 @@ button:disabled {
 }
 
 .hotel-card-details-button {
-  background-color: var(--background-color-br);
+  background-color: var(--color-brown-756157);
   padding: 9px 15px;
   border: none;
   border-radius: 4px;
 }
 
 .hotel-card-favorite-button {
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   border-radius: 4px;
   padding: 9px 15px;
 }
 
 .hotel-card-details-button {
-  background-color: var(--background-color-br);
+  background-color: var(--color-brown-756157);
 }
 
 .hotel-card-details-button:hover,
 .hotel-card-details-button:focus {
-  background-color: var(--background-color-br-hov-foc);
+  background-color: var(--color-brown-615048);
 }
 
 .hotel-card-details-button:active {
-  background-color: var(--background-color-br);
-  color: var(--color-transparent-30);
+  background-color: var(--color-brown-756157);
+  color: var(--color-white-ffffff4d);
 }
 
 .hotel-card-details-button:disabled {
-  background-color: var(--background-color-gy-add);
+  background-color: var(--color-gray-E5E5E5);
 }
 
 .hotel-card-favorite-button:hover,
 .hotel-card-favorite-button:focus {
-  background-color: var(--background-color-bl-hov-foc);
+  background-color: var(--color-blue-68A2CA);
 }
 
 .hotel-card-favorite-button:active {
-  background-color: var(--background-color-bl);
-  color: var(--color-transparent-30);
+  background-color: var(--color-blue-82B3D3);
+  color: var(--color-white-ffffff4d);
 }
 
 .hotel-card-favorite-button:disabled {
-  background-color: var(--background-color-gy-add);
+  background-color: var(--color-gray-E5E5E5);
 }
 
 .hotel-card-selected-button {
-  background-color: var(--background-color-gr);
+  background-color: var(--color-green-7DB54F);
   border-radius: 4px;
   padding: 9px 15px;
 }
 
 .hotel-card-selected-button:hover,
 .hotel-card-selected-button:focus {
-  background-color: var(--background-color-gr-add);
+  background-color: var(--color-green-6C9E42);
 }
 
 .hotel-card-selected-button:active {
-  background-color: var(--background-color-gr);
-  color: var(--color-transparent-30);
+  background-color: var(--color-green-7DB54F);
+  color: var(--color-white-ffffff4d);
 }
 
 .results-footer {
@@ -900,7 +879,7 @@ button:disabled {
   top: -50%;
   height: 1px;
   width: 1057px;
-  background-color: var(--line-color-gr);
+  background-color: var(--color-gray-E6E6E6);
 }
 
 .pagination {
@@ -924,24 +903,24 @@ button:disabled {
   line-height: 36px;
   color: inherit;
   text-decoration: none;
-  background-color: var(--background-color-bl);
+  background-color: var(--color-blue-82B3D3);
   border-radius: 4px;
 }
 
 .pagination-link:hover,
 .pagination-link:focus {
-  background-color: var(--background-color-bl-hov-foc);
-  border: 1px solid var(--background-color-bl);    /*что-то странное в состоянии focus (перемещение табом же?) в инспекторе focus: цвет соответствует объявленному, но в браузере рамка черная при передвижением tab-ом, и черная рамка на focus-visible: . Похоже, я что-то не понимаю*/
+  background-color: var(--color-blue-68A2CA);
+  border: 1px solid var(--color-blue-82B3D3);    /*что-то странное в состоянии focus (перемещение табом же?) в инспекторе focus: цвет соответствует объявленному, но в браузере рамка черная при передвижением tab-ом, и черная рамка на focus-visible: . Похоже, я что-то не понимаю*/
 }
 
 .pagination-link:active {
-  background-color: var(--background-color-bl);   /*в макете зачем-то выделена граница с таким же цветом - ??*/
-  color: var(--color-transparent-30);
+  background-color: var(--color-blue-82B3D3);   /*в макете зачем-то выделена граница с таким же цветом - ??*/
+  color: var(--color-white-ffffff4d);
 }
 
 .pagination-item:first-child .pagination-link {
-  color: var(--text-color-bk);
-  background-color: var(--background-color-gy);
+  color: var(--color-black);
+  background-color: var(--color-gray-f2f2f2);
 }
 
 .pagination-item:nth-child(5) .pagination-link {
@@ -958,7 +937,7 @@ button:disabled {
 }
 
 .hotel-quantity-text {
-  color: var(--text-color-gy);
+  color: var(--color-black-333333);
   /* margin-right: 35px; */
 }
 
@@ -972,19 +951,19 @@ button:disabled {
 }
 
 .footer-phone:hover {
-  color: var(--background-color-br);
+  color: var(--color-brown-756157);
 }
 
 .footer-phone:focus {
-  color: var(--background-color-br);
+  color: var(--color-brown-756157);
 }
 
 .footer-phone:active {
-  color: var(--logo-color-transparent-br);
+  color: var(--color-brown-7561574d);
 }
 
 .vk-button,
 .telegram-button,
 .youtube-button {
-  color: var(--text-color-bk);
+  color: var(--color-black);
 }
