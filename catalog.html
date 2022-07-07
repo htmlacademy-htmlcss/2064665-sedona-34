@@ -70,8 +70,9 @@
             <ul class="catalog-filter-list reset-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>
-                  Бассейн
+                  <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
@@ -115,9 +116,23 @@
 
           <fieldset class="catalog-filter-group cost">
             <legend class="catalog-filter-title title-cost">Стоимость, ₽:</legend>
-            <label><input type="text" value="0 от"></label>
-            <label><input type="text" value="9000 до"></label>
-            <div id="slider"></div>
+            <div class="cost-fields">
+              <label class="cost-label"><input class="cost-input" type="number" name="min price" placeholder="0" value="0"></label>
+              <label class="cost-label"><input class="cost-input" type="number" name="max price" placeholder="9000" value="9000"></label>
+            </div>
+
+            <div class="range-scale">
+              <div class="range-bar" style="left: 0; width: 197px">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>    <!-- Я вроде видел инфу про точки в конце описаний, чтобы читалки расставляли акценты. Нужно ли ставить точки в остальных visually-hidden? -->
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
+
+
           </fieldset>
           <div class="filter-buttons">
             <button class="apply-button button" type="submit">применить</button>

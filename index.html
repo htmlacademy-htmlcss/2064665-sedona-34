@@ -174,5 +174,51 @@
         </a>
       </section>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        </section>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group-date">
+            <label class="date arrival" for="arrival">Дата заезда:</label>
+            <input class="search-form-field modal-field" type="text" id="arrival" name="arrival" placeholder="Укажите дату">
+          </p>
+          <p class="field-group-date">
+            <label class="date departure" for="departure">Дата выезда:</label>
+            <input class="search-form-field modal-field" type="text" id="departure" name="departure" placeholder="Укажите дату">
+          </p>
+          <div class="guests-number">
+            <p class="field-group">
+              <label class="guests adults" for="adults">Взрослые:</label>
+              <button class="guests-button">
+                <span class="minus">1</span>
+              </button>
+              <input class="guests-form-field" type="text" id="adults" name="adults" placeholder="2">
+              <button class="guests-button">
+                <span class="plus">1</span>
+              </button>
+            </p>
+            <p class="field-group">
+              <label class="guests children" for="children">Дети:</label>
+              <button class="guests-button">
+                <span class="minus">1</span>
+              </button>
+              <input class="guests-form-field" type="text" id="children" name="children" placeholder="1">
+              <button class="guests-button">
+                <span class="plus">1</span>
+              </button>
+            </p>
+          </div>
+            <button class="button-search">
+              <span class="search">Найти</span>
+            </button>
+
+        </form>
+      </div>
+    </div>
   </body>
 </html>
