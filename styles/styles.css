@@ -25,6 +25,7 @@
   --color-blue-81B3D2: #81B3D2;
   --color-blue-68A2CA: #68A2CA;
   --color-blue-68a2ca4d: #68a2ca4d;
+  --color-blue-3F5E72: #3F5E72;
   --color-brown-756157: #756157;
   --color-brown-7561574d: #7561574d;
   --color-brown-615048: #615048;
@@ -35,6 +36,7 @@
   --color-gray-f2f2f2: #f2f2f2;
   --color-gray-f2f2f2cc: #f2f2f2cc;
   --color-gray-00000026: #00000026;
+  --color-gray-0000004d: #0000004d;
   --color-gray-E6E6E6: #E6E6E6;
 }
 
@@ -571,6 +573,55 @@ button:disabled {
   border: none;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-white);
+}
+
+.control:hover .control-mark {
+  background-color: var(--color-white-ffffff99);
+}
+
+.control:focus .control-mark  {
+  outline: 3px solid var(--color-blue-83B3D3);        /*через tab не отрабатывает, в принудительном состоянии работает*/
+}
+
+.control:active .control-mark {
+  background-color: var(--color-white-ffffff4d);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url(/images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-blue-3F5E72);
+  border-radius: 50%;
+  content: "";
+}
+
 .infrastructure {
   width: 150px;
   height: 150px;
@@ -779,22 +830,48 @@ button:disabled {
   margin-right: 191px;
 }
 
-.select-control {
+.select {
   width: 290px;
   margin-right: 78px;
+  display: flex;
+  align-items: center;
 }
 
-.results-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.select-control {
+  width: 100%;
+  padding: 14px 20px;
+  padding-right: 40px;
+  font: inherit;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-E5E5E5);
+  border-radius: 4px;
+  background-image: url("/images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border-color: var(--color-blue-68A2CA);
+  outline: none;
+}
+
+.select-control:active {
+  border-color: var(--color-blue-3F5E72);
+  outline: none;
+}
+
+.select-control:disabled {
+  border-color: var(--color-gray-0000004d);
+  outline: none;
 }
 
 .results-view-item {
   width: 48px;
   height: 48px;
   margin-right: 8px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--color-gray-E5E5E5);
   border-radius: 4px;
 }
 
@@ -803,17 +880,17 @@ button:disabled {
 }
 
 .results-view-item:hover {
-  border: 2px solid #000000;
+  border: 2px solid var(--color-black);
 }
 
 .results-view-item:focus {
-  border: 2px solid #68A2CA;
+  border: 2px solid var(--color-blue-68A2CA);
+  outline: none;
 }
 
 .results-view-item:active {
-  border: 2px solid #000000;
+  border: 2px solid var(--color-black);
 }
-
 
 .results-icon {
   padding: 17px;
