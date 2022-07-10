@@ -86,7 +86,7 @@ body {
 
 .navigation {
   display: flex;
-  max-height: 65px;     /* без этой строки высота хедера была 74px, не могу понять почему, в т.ч. почему именно 74px*/
+  max-height: 65px;
 }
 
 .header-sedona-logo {
@@ -595,7 +595,7 @@ button:disabled {
 }
 
 .control:focus .control-mark  {
-  outline: 3px solid var(--color-blue-83B3D3);        /*через tab не отрабатывает, в принудительном состоянии работает*/
+  outline: 3px solid var(--color-blue-83B3D3);
 }
 
 .control:active .control-mark {
@@ -690,7 +690,7 @@ button:disabled {
 .cost-label:last-child .cost-input {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-left: -2px;         /* поперечина красится не всегда, но из 2х вариантов ее задания этот меня раздражает меньше*/
+  margin-left: -2px;
 }
 
 .cost-input:hover {
@@ -698,13 +698,12 @@ button:disabled {
 }
 
 .cost-input:focus {
-  border-color: var(--color-blue-81B3D2);           /*при фокусе появляется радиус на поперечине. Насчет box-shadow не уверен*/
+  border-color: var(--color-blue-81B3D2);
   outline: 1px solid white;
   box-shadow: 0px 0px 0px 3px var(--color-blue-81B3D2);
 }
 
-/* .cost-input:active { */          /*из скринкаста, я так понял, активное состояние нужно задавать через :not, тогда :active - не нужен? */
-.cost-input:focus:not(:placeholder-shown) {       /*при этом состояния focus и active работают вместе, т.е. коричневый фон и голубая рамка сразу. Все что перепробовал не дало результата */
+.cost-input:focus:not(:placeholder-shown) {
   background-color: var(--color-brown-756257);
 }
 
@@ -1086,11 +1085,11 @@ button:disabled {
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: var(--color-blue-68A2CA);
-  border: 1px solid var(--color-blue-82B3D3);    /*что-то странное в состоянии focus (перемещение табом же?) в инспекторе focus: цвет соответствует объявленному, но в браузере рамка черная при передвижением tab-ом, и черная рамка на focus-visible: . Похоже, я что-то не понимаю*/
+  border: 1px solid var(--color-blue-82B3D3);
 }
 
 .pagination-link:active {
-  background-color: var(--color-blue-82B3D3);   /*зачем в макете  выделена граница с таким же цветом - ??*/
+  background-color: var(--color-blue-82B3D3);
   color: var(--color-white-ffffff4d);
 }
 
@@ -1141,7 +1140,7 @@ button:disabled {
 .youtube-button {
   color: var(--color-black);
 }
-/*старт модального окна*/
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1256,6 +1255,8 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 label[for='arrival'],
@@ -1310,7 +1311,7 @@ label[for='children']
   outline: 3px solid var(--color-blue-83B3D3);
 }
 
-.search-form-field:focus:not(:placeholder-shown) {     /*так же не срабатывает, как и в предыдущем использовании :focus:not(:placeholder-shown*/
+.search-form-field:focus:not(:placeholder-shown) {
   outline: 2px solid var(--color-black);
 }
 
@@ -1428,7 +1429,8 @@ label[for='children']
 .comment {
   display: inline-block;
   padding: 0;
-  margin: 1px auto 1px 155px;
+  margin-left: 155px;
+  margin-bottom: 11px;
 }
 
 .error {
