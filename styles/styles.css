@@ -1251,7 +1251,7 @@ input[type=number] {
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: var(--color-blue-68A2CA);
-  border: 1px solid var(--color-blue-82B3D3);
+  outline: 1px solid var(--color-blue-82B3D3);
 }
 
 .pagination-link:active {
@@ -1274,7 +1274,7 @@ input[type=number] {
 
 .select-hotel-quantity {
   margin-left: 50px;
-  padding: 14px 130px 14px 15px;
+  padding: 14px 40px 14px 15px;
   width: 160px;
   font-size: 18px;
 }
